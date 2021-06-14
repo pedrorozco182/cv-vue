@@ -1,34 +1,80 @@
 <template>
-  <div class="home">
-    <!-- <img alt="Vue logo" src="../assets/logo.png" /> -->
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
-
-    <FaceImage />
-    <ListLinks/>
-  </div>
+  <v-container>
+    <v-row>
+      <v-col class="d-flex justify-center">
+        <FaceImage />
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col class="d-flex justify-center">
+        <div
+          class="textWelcome text-h3 text-md-h2"
+          style="font-family: 'Caveat' !important"
+        >
+          Hello! I'M <b> Pedro Orozco.</b>
+        </div>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col class="d-flex justify-center">
+        <div
+          class="text-caption text-md-overline textSubtitle"
+          style="font-family: 'Press Start 2P' !important"
+        >
+          Developer | Musician | Dreamer
+        </div>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
-// @ is an alias to /src
-import FaceImage from "@/components/home/FaceImage.vue";
-import ListLinks from "@/components/home/ListLinks.vue";
+import FaceImage from "../components/home/FaceImage.vue";
+
 export default {
   name: "Home",
+
   components: {
     FaceImage,
-    ListLinks
   },
+  data: () => ({
+    importantLinks: [
+      {
+        text: "Documentation",
+        href: "https://vuetifyjs.com",
+      },
+      {
+        text: "Chat",
+        href: "https://community.vuetifyjs.com",
+      },
+      {
+        text: "Made with Vuetify",
+        href: "https://madewithvuejs.com/vuetify",
+      },
+      {
+        text: "Twitter",
+        href: "https://twitter.com/vuetifyjs",
+      },
+      {
+        text: "Articles",
+        href: "https://medium.com/vuetify",
+      },
+    ],
+  }),
 };
 </script>
-
-<style >
-.home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 60%;
-  flex-direction: column;
+<style>
+.container {
+  height: 100%;
+}
+.textWelcome {
+  color: aliceblue;
+  text-shadow: 2px 5px 5px #00000096;
   
 }
+.textSubtitle {
+  color:rgb(0, 225, 255);
+   text-shadow: 2px 2px 5px #000000a4;
 
+}
 </style>
