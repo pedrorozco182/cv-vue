@@ -1,53 +1,39 @@
 <template>
-  <div>
-    <ul class="ul_link">
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel"
-          target="_blank"
-          rel="noopener"
-          >Twitter</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router"
-          target="_blank"
-          rel="noopener"
-          >router</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-vuex"
-          target="_blank"
-          rel="noopener"
-          >vuex</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint"
-          target="_blank"
-          rel="noopener"
-          >eslint</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-unit-jest"
-          target="_blank"
-          rel="noopener"
-          >unit-jest</a
-        >
-      </li>
-    </ul>
+  <div >
+   <a v-for="link in importantLinks" :key="link" :href="link.href" target="_blank" > <v-btn  icon color="white" text>
+      <v-icon>  {{ link.icon }}</v-icon>
+    </v-btn>
+    </a>
   </div>
 </template>
 
 <script>
 export default {
-  name: "ListLinks"
+  name: "ListLinks",
+  data: () => ({
+    importantLinks: [
+      {
+        text: "Documentation",
+        href: "https://twitter.com/pedrorozco182",
+        icon: "mdi-twitter",
+      },
+      {
+        text: "Chat",
+        href: "https://www.linkedin.com/in/pjcode",
+        icon: "mdi-linkedin",
+      },
+      {
+        text: "Made with Vuetify",
+        href: "https://github.com/pedrorozco182",
+        icon: "mdi-github",
+      },
+      {
+        text: "Twitter",
+        href: "mailto:pedrorozco182@gmail.com",
+        icon: "mdi-gmail",
+      },
+    ],
+  }),
 };
 </script>
 
