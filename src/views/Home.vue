@@ -1,33 +1,21 @@
 <template>
   <v-container>
-    <v-row>
+    <v-row style="">
       <v-col class="d-flex justify-center">
         <FaceImage />
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col class="d-flex justify-center">
         <div
           class="textWelcome text-h3 text-md-h2"
           style="font-family: 'Caveat' !important"
         >
           Hello! I'm <b> PJ.</b>
         </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col class="d-flex justify-center">
         <div
-          class="text-caption text-md-overline textSubtitle"
+          class="text-sm-caption text-md-overline textSubtitle"
           style="font-family: 'Press Start 2P' !important"
         >
           Developer | Musician | Dreamer
         </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col class="d-flex justify-center">
-        <ListLinks/>
+        <ListLinks />
       </v-col>
     </v-row>
   </v-container>
@@ -41,9 +29,8 @@ export default {
 
   components: {
     FaceImage,
-    ListLinks
+    ListLinks,
   },
-  
 };
 </script>
 <style>
@@ -52,13 +39,26 @@ export default {
   z-index: 10000;
 }
 .textWelcome {
+  padding-top: 20px;
   color: aliceblue;
   text-shadow: 2px 5px 5px #00000096;
   z-index: 10000;
+  margin-top: 20px 0;
 }
 .textSubtitle {
-  color:rgb(0, 225, 255);
-   text-shadow: 2px 2px 5px #000000a4;
-z-index: 10000;
+  color: rgb(0, 225, 255);
+  text-shadow: 2px 2px 5px #000000a4;
+  z-index: 10000;
+  font-size: 10px;
+  padding: 20px 0;
+}
+.col {
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 70px;
+}
+.row {
+  height: 100%;
 }
 </style>

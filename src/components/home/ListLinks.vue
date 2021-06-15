@@ -1,8 +1,14 @@
 <template>
-  <div >
-   <a v-for="link in importantLinks" :key="link" :href="link.href" target="_blank" > <v-btn  icon color="white" text>
-      <v-icon>  {{ link.icon }}</v-icon>
-    </v-btn>
+  <div>
+    <a
+      v-for="link in importantLinks"
+      :key="link.href"
+      :href="link.href"
+      target="_blank"
+    >
+      <v-btn icon color="white" text>
+        <v-icon> {{ link.icon }}</v-icon>
+      </v-btn>
     </a>
   </div>
 </template>
