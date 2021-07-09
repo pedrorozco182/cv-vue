@@ -6,7 +6,7 @@
       :href="link.href"
       target="_blank"
     >
-      <v-btn icon color="white" text>
+      <v-btn class="button" icon color="white" text>
         <v-icon> {{ link.icon }}</v-icon>
       </v-btn>
     </a>
@@ -55,5 +55,14 @@ li {
 }
 a {
   color: #3cb8ff;
+}
+.button {
+  transition: all 0.2;
+  &:hover {
+    transform: scale(1.3);
+  }
+  &:active {
+    transform: scale(0.9);
+  }
 }
 </style>
