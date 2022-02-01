@@ -7,8 +7,9 @@
           class="textWelcome text-h3 text-md-h2"
           style="font-family: 'Caveat' !important"
         >
-          Hello! I'm <b> PJ.</b>
+          <span id="glads_text" class="typingEffect">Hello! I am PJ.</span>
         </div>
+
         <div
           class="text-sm-caption text-md-overline textSubtitle"
           style="font-family: 'Press Start 2P' !important"
@@ -42,8 +43,9 @@ export default {
   padding-top: 20px;
   color: aliceblue;
   text-shadow: 2px 5px 5px #00000096;
-  z-index: 10000;
+  z-index: 1;
   margin-top: 20px 0;
+  width: 18ch;
 }
 .textSubtitle {
   color: rgb(0, 225, 255);
@@ -60,5 +62,29 @@ export default {
 }
 .row {
   height: 100%;
+}
+.typingEffect {
+  display: block;
+  font-family: monospace;
+  white-space: nowrap;
+  border-inline-end: 4px solid;
+  width: 0;
+  animation: 3s typing 2s steps(16) infinite alternate,
+    blink 0.3s infinite step-end alternate;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 16ch;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 </style>
